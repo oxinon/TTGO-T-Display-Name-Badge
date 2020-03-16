@@ -3,7 +3,7 @@ Simple Name Badge with a ESP32 based board, build with Arduino IDE
 
 <br>
 
-<p><img src="https://github.com/oxinon/TTGO-T-Display-Name-Badge/blob/master/picture/priceticker2.png" alt="Cover" width="600"></p>
+<p><img src="https://github.com/oxinon/TTGO-T-Display-Name-Badge/blob/master/pictures/NameBadge.png" alt="Cover" width="600"></p>
 <br>
 <br>
 Simple Name Badge by using ESP32 based TTGO-T-Display  for the Arduino IDE platform
