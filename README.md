@@ -34,7 +34,7 @@ https://www.silabs.com/community/interface/knowledge-base.entry.html/2017/01/10/
 <br>
 
 <a name="libraries"></a><h2>Libraries for Arduino IDE</h2>
-Now we add libraries for Arduino IDE 1.8.7:
+Now we add libraries for Arduino IDE 1.8.8:
 <br>
 
 + [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI)
