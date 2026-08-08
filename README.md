@@ -1,50 +1,39 @@
-# TTGO-T-Display-Name-Badge
-Simple Name Badge with a ESP32 based board, build with Arduino IDE
+# TTGO T-Display Name Badge
 
-<br>
+A simple digital name badge built on the TTGO T-Display (ESP32 with a TFT screen), programmed with the Arduino IDE.
 
-<p><img src="https://github.com/oxinon/TTGO-T-Display-Name-Badge/blob/master/pictures/NameBadge.png" alt="Cover" width="600"></p>
-<br>
-<br>
-Simple Name Badge by using ESP32 based TTGO-T-Display  for the Arduino IDE platform
-<br>
-Name Badge on Youtube: https://youtu.be/ZeQcyYPs6A0
-<br>
-<br>
+![Name Badge](https://github.com/oxinon/TTGO-T-Display-Name-Badge/raw/master/pictures/NameBadge.png)
 
-* * *
+[Watch it in action on YouTube](https://youtu.be/ZeQcyYPs6A0)
 
-<b>Index of this project</b>
+## Hardware
 
-+ [Add ESP32 Arduino IDE](#ESP32)
-+ [Libraries for Arduino IDE](#libraries)
-+ [Case and parts information](#case)
+- [TTGO T-Display](https://github.com/Xinyuan-LilyGO/TTGO-T-Display) (ESP32, TFT display)
 
-* * *
-<br>
-<a name="ESP32"></a><h2>Add ESP32 in Arduino IDE</h2>
-Before we can start compiling, the Arduino IDE must have the TTGO-T-Display board, based on an ESP32 in the board selection available.
-The instruction on https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/
-In board selector you can select "ESP32 Dev Module" for TTGO-T-Display.
-<br>
-<br>
-For MAC users install the "CP210x USB to UART Bridge VCP Drivers" from Silicon Labs, the port to select is /dev/cu.SLAB_USBtoUART in Arduino IDE under tools-->Port
-<br>
-https://www.silabs.com/community/interface/knowledge-base.entry.html/2017/01/10/legacy_os_softwarea-bgvU
-<br>
+## Setup
 
-<a name="libraries"></a><h2>Libraries for Arduino IDE</h2>
-Now we add libraries for Arduino IDE 1.8.8:
-<br>
+### 1. Add ESP32 support to the Arduino IDE
 
-+ [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI)
-   
-The instruction for the "TFT_eSPI" and TTGO-T-Display can be found here https://github.com/Xinyuan-LilyGO/TTGO-T-Display<br>
-If you are have problem with the "wifi.h" delete the arduino/libraries/wiFi directory, you can use the esp32 WiFi.h
-<br>
-<br>
-<a name="case"></a><h2>Case and parts information</h2>
-You find two files in case directory, .dxf and .stp With the files you can cut stainless steel sheet. I use a laser cuter for this.
-<p><img src="https://github.com/oxinon/TTGO-T-Display-Name-Badge/blob/master/case/case.png" alt="Cover" width="600"></p>
-<br>
-<p><img src="https://github.com/oxinon/TTGO-T-Display-Name-Badge/blob/master/pictures/TTGO-T-Display_Build.jpg" alt="Cover" width="600"></p>
+Follow this guide to install the ESP32 board package: <https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/>
+
+In the board selector, choose **ESP32 Dev Module** for the TTGO T-Display.
+
+**macOS users:** install the [CP210x USB to UART Bridge VCP driver](https://www.silabs.com/community/interface/knowledge-base.entry.html/2017/01/10/legacy_os_softwarea-bgvU) from Silicon Labs. The correct port is `/dev/cu.SLAB_USBtoUART` (Tools → Port).
+
+### 2. Install the required library
+
+Tested with Arduino IDE 1.8.8:
+
+- [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) — display driver
+
+Setup instructions for `TFT_eSPI` on the TTGO T-Display: <https://github.com/Xinyuan-LilyGO/TTGO-T-Display>
+
+**Troubleshooting:** If you run into `WiFi.h` conflicts, delete the `arduino/libraries/WiFi` directory and use the ESP32 core's built-in `WiFi.h` instead.
+
+### 3. Set your name and flash
+
+Open `oxinon-name-badge/oxinon-name-badge.ino`, edit the displayed text/name in the sketch, select the correct board/port, and upload.
+
+## Enclosure
+
+The `case/` folder contains `.dxf` and `.stp` files for a stainless-steel enclosure, designed to be cut on a laser cutter.
